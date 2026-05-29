@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>music play</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../assets/css/headers.css">
+    </head>
+
+    <body>
+        <audio src id="audio"></audio>
+        <header class="herder-nav1">
+            <div><img class="div-img-a" src="#" alt><p>MusicVibe</p></div>
+        </header>
+
+        <header class="herder-nav2">
+            <nav>
+                <div><a href="../html/index.html"><img class="div-img-a"
+                            src="../assets/img/home_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                            alt="home"><p>Home</p></a></div>
+
+                <div><a href="../html/playlist.html"><img class="div-img-a"
+                            src="../assets/img/playlist_play_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                            alt="home"><p>Playlists</p></a></div>
+            </nav>
+        </header>
+
+        <header class="herder-nav3">
+            <div><button>Encrever-se</button></div>
+        </header>
+
+        <main>
+
+            <section class="music-player">
+                <section class="title-name">
+                    <h1 class="music-name"> song one</h1>
+                    <p class="artist-name">artist-name</p>
+                </section>
+                <section>
+                    <div class="disk"></div>
+                </section>
+
+                <div class="song-slider">
+                    <input title="song" type="range" name value="0" class="sneek-bar">
+                    <span class="current-time">00:00</span>
+                    <span class="song-duration">00:00</span>
+                </div>
+                <div class="controls">
+                    <button class="btn forward-btn">
+                        <
+                    </button>
+                    <button title="tn" class="play-btn pause">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn backward-btn">
+                        >
+                    </div>
+            </section>
+        </main>
+
+            <script src="data.js"></script>
+            <script type="module" src="script.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "principal";
+    src: url("../assets/fonts/Open_Sans/static/OpenSans-ExtraBold.ttf");
+}
+
+:root {
+    --colorprincipal: #0b0d1a;
+    --colorlink: #1a1446;
+    --colorcardes: #24135f;
+
+    --colorsegunda: #8b5cf6;
+    --colordetalhes: #EC4899;
+    --accent: #38bdf8;
+
+    --textprincipal: #fff;
+    --textsegundary: #b8b9e6;
+    --tetfooter: #8a8cbf;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg,#0f1026,#1b1d4e);
+    background-attachment: fixed;
+    color: var(--textprincipal);
+    font-family: principal;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    min-width: 320px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    row-gap: 30px;
+    margin-top: 12%;
+    max-width: 350px;
+    min-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ec489a49;
+    color: white;
+}
+
+.title-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+.artist-name,
+.music-name {
+    text-transform: capitalize;
+}
+
+.music-name {
+    font-weight: 500;
+    width: 300px;
+    max-height: 100px;
+    margin-bottom: 5%;
+}
+
+.artist-name {
+    font-size: 20px;
+}
+
+.disk {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color:#0f1026;
+    background-image: url('../exercicio12/modelo14/manha.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 0 10px rgb(255, 255, 255, 0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.disk.play {
+    animation-play-state: running;
+}
+
+.disk::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:#0f1026;
+}
+
+.song-slider {
+    width: 100%;
+    position: relative;
+}
+
+.sneek-bar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--colordetalhes);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sneek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0px;
+    height: 20px;
+    background-color: #000;
+    box-shadow: -400px 0 0 400px #d5eebb;
+    outline: none;
+}
+
+.corrent-time,
+.song-duration {
+    font-size: 14px;
+}
+
+.song-duration {
+    position: absolute;
+    right: 0;
+}
+
+.controls {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.play-btn {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background-color:var(--colorlink);
+}
+
+.play-btn span {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background-color:var(--textprincipal);
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.play-btn span:nth-child(2) {
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn.pause span:nth-child(2) {
+    transform: translate(-50%) scaleY(0);
+}
+
+.play-btn.pause span:nth-child(1) {
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-btn.pause {
+    animation: pulse 4s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0;
+    }
+
+    50% {
+        box-shadow: 0 0 0 5px rgb(255, 255, 255, .6);
+    }
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--colorlink);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
