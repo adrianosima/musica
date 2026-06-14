@@ -51,6 +51,11 @@ main {
     padding: 15px;
 }
 
+.section-content1 {
+    padding: 15px;
+    padding-left: 0px;
+}
+
 .misic-content .h1-discover{
     font-size: 50px;
     font-weight: bold;
@@ -98,6 +103,8 @@ main {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     box-shadow: -0px -0px 10px 1px #ec489a65;
+    background-color: #2f28281f;
+    color: #f8f8f8ff;
 }
 
 .h2-section {
@@ -133,7 +140,6 @@ main {
     border-radius: 10px 10px 0px  0px ;
 }
 
-
 .paragra-content {
     display: flex;
     background-color: #d6d1d142;
@@ -157,7 +163,6 @@ main {
 .img-content-music1 {
     display: flex;
     max-width: 790px;
-    margin-top: 40px;
     gap: 20px;
     margin-bottom: 40px;
     justify-content: center;
@@ -176,7 +181,6 @@ main {
 }
 
 .content-div {
-    background-color: #8080801f;
     height: 250px;
     border-radius: 10px;
     text-align: center;
@@ -211,6 +215,8 @@ main {
     margin-bottom: 10px;
 }
 
+/*Trabalhando com inpurt e btn*/
+
 .input-div-content {
     display: flex;
     justify-content: center;
@@ -229,6 +235,10 @@ main {
     outline: none;
 }
 
+.input-div-content input::placeholder {
+    color: var(--textsegundary);
+}
+
 .input-div-content button {
     width: 106px;
     border-width: 0;
@@ -241,7 +251,7 @@ main {
 
 @media all and (min-width: 56px) and (max-width: 415px) {
     
-.misic-content .h1-discover{
+.misic-content .h1-discover {
     font-size: 25px;
     font-weight: normal;
 }
@@ -250,7 +260,7 @@ main {
 
 @media all and (min-width: 416px) and (max-width: 890px) {
     
-.misic-content .h1-discover{
+.misic-content .h1-discover {
     margin-top: 25px;
     font-size: 40px;
     font-weight: normal;

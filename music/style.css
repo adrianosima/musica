@@ -198,6 +198,16 @@ main {
     animation: pulse 4s linear infinite;
 }
 
+.musics-content {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+
+
+
 @keyframes pulse {
     0% {
         box-shadow: 0;
