@@ -37,9 +37,17 @@ footer {
 }
 
 .redesocias img{
+    border-radius: 50%;
+}
+.redesocias .img{
+    width: 30px;
+    height: 30px;
+}
+
+.redesocias .git {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+
 }
 
 .div-section {
